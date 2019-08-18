@@ -25,7 +25,7 @@
             android:text="GO ALL IN"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView2" android:textSize="48"
+            android:id="@+id/textView2" android:textSize="48sp"
             android:fontFamily="@font/montserrat" app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/imageView"
             android:textColor="@android:color/white" android:layout_marginTop="24dp"
