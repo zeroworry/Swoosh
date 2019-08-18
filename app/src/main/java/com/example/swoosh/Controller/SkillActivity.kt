@@ -1,7 +1,8 @@
-package com.example.swoosh
+package com.example.swoosh.Controller
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.swoosh.Utilities.EXTRA_LEAGUE
+import com.example.swoosh.R
 
 class SkillActivity : BaseActivity() {
 
