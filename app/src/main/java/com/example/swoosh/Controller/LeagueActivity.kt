@@ -2,6 +2,7 @@ package com.example.swoosh.Controller
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.view.View
 import android.widget.Toast
 import com.example.swoosh.Model.Player
@@ -14,9 +15,22 @@ class LeagueActivity : BaseActivity() {
 
     var player = Player("","")
 
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putParcelable(EXTRA_PLAYER_CLASS, player)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_league)
+        // This is another way of recovering the state besides the onRestoreInstanceState() done inside the onCreate()
+        // player = savedInstanceState.getParcelable<Player>(EXTRA_PLAYER_CLASS)!!
+
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        player = savedInstanceState.getParcelable<Player>(EXTRA_PLAYER_CLASS)!!
     }
 
     fun leagueNextClicked(view: View){

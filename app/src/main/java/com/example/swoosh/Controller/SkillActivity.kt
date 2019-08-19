@@ -23,6 +23,16 @@ class SkillActivity : BaseActivity() {
         println(player.league)
     }
 
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putParcelable(EXTRA_PLAYER_CLASS, player)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        player = savedInstanceState.getParcelable<Player>(EXTRA_PLAYER_CLASS)!!
+    }
+
     // Move to the next Activity
     fun onClickFinish(view: View){
         if (player.skill != ""){
