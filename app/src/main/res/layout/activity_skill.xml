@@ -36,7 +36,7 @@
             app:layout_constraintTop_toTopOf="@+id/backgroundImg2"/>
 
     <TextView
-            android:text="@string/textview"
+            android:text="@string/desired_league"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView5"
@@ -63,34 +63,36 @@
                 android:text="@string/beginner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/toggleButton5"
+                android:id="@+id/beginnerSkillBtn"
                 android:layout_weight="1"
                 android:background="@drawable/swoosh_toggle"
                 android:textSize="18sp"
                 android:textColor="@android:color/white"
                 android:textOff="@string/beginner"
                 android:textOn="@string/beginner"
-                android:layout_marginEnd="16dp"/>
+                android:layout_marginEnd="16dp"
+                android:onClick="onClickBeginner"/>
 
         <ToggleButton
                 android:text="@string/advanced"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/toggleButton4"
+                android:id="@+id/advancedSkillBtn"
                 android:layout_weight="1"
                 android:background="@drawable/swoosh_toggle"
                 android:textSize="20sp"
                 android:textColor="@android:color/white"
                 android:textOff="@string/advanced"
                 android:textOn="@string/advanced"
-                android:layout_marginStart="16dp"/>
+                android:layout_marginStart="16dp"
+                android:onClick="onClickAdvanced"/>
     </LinearLayout>
 
     <Button
-            android:text="@string/get_started"
+            android:text="@string/finish"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/getStartedButton2"
+            android:id="@+id/finishSkillBtn"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="16dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -101,5 +103,6 @@
             android:textSize="20sp"
             android:textColor="@android:color/white"
             android:background="@drawable/swoosh_button"
-            app:layout_constraintHorizontal_bias="0.0"/>
+            app:layout_constraintHorizontal_bias="0.0"
+            android:onClick="onClickFinish"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
