@@ -22,7 +22,7 @@
     <TextView
             android:text="@string/empty"
             android:layout_width="290dp"
-            android:layout_height="72dp"
+            android:layout_height="wrap_content"
             android:id="@+id/searchLeagueTxt"
             app:layout_constraintStart_toEndOf="@+id/backgroundImg3"
             app:layout_constraintHorizontal_bias="0.5"
